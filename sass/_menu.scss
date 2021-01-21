@@ -1,0 +1,234 @@
+//menu =====================
+
+.menu {
+  position: fixed;
+  top: 0;
+  padding-top: 20px;
+  align-items: center;
+  width: 100%;
+  z-index: 99;
+
+  @include d(m) {
+    display: none;
+  }
+
+
+  .menu__wrapper {
+    display: flex;
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li a {
+        color: white;
+        font-weight: 600;
+        transition: 0.4s;
+
+        &:hover {
+          color: $roxo;
+        }
+      }
+
+      li+li {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .menu__links {
+    margin-left: auto;
+  }
+
+  .menu__sociais {
+    margin-left: 15px;
+    margin-top: 5px;
+
+    li+li {
+      margin-left: 15px !important;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      transition: 0.4s ease;
+
+      &:hover {
+        path {
+          fill: $roxo !important;
+        }
+      }
+
+
+    }
+  }
+
+  .logo__2 {
+    width: 100px;
+    margin: 0 20px;
+    margin-top: 5px;
+  }
+}
+
+/* .fixed-top{
+  transition: background 0.2s ease;
+
+} */
+.ativo__scrool .fixed-top {
+  height: 80px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.803);
+}
+
+.menu__mobile {
+  display: none;
+
+  @include d(m) {
+    display: block;
+    padding: 20px 0;
+    height: 80px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.474);
+
+    /* .bg__blur {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            z-index: -1;
+            
+        } */
+
+    .wrapper__menu {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        z-index: 100;
+
+        .logo__2 {
+          width: 80px;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .menu__icon-click {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+//icon mobile
+.menu__icon button {
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__icon {
+  z-index: 99;
+}
+
+.menu__icon .hamburguer {
+  margin-left: 5px;
+}
+
+.menu__icon .menu__icon-click {
+  display: flex;
+  margin-left: auto;
+  padding: 13px 8px 13px 8px;
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: currentColor;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+  z-index: 999;
+}
+
+.menu__icon i {
+  display: block;
+  background: white;
+  width: 24px;
+  height: 1px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.menu__icon i:after,
+.menu__icon i:before {
+  content: "";
+  display: block;
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.menu__icon i:before {
+  top: -9px;
+  width: 90%;
+}
+
+.menu__icon i:after {
+  bottom: -8px;
+  width: 120%;
+}
+
+.menu__open i {
+  transform: rotate(45deg);
+  background: $roxo;
+}
+
+.menu__open i:before {
+  transform: rotate(90deg);
+  top: -1px;
+  width: 100%;
+  background: $roxo;
+
+}
+
+.menu__open i:after {
+  transform: rotate(90deg);
+  bottom: 1px;
+  width: 100%;
+  opacity: 0;
+  background: $roxo;
+
+}
+
+.menu__atalhos {
+  display: none;
+}
+
+.menu__open .menu__atalhos {
+  display: block !important;
+}
+
+.menu__open .menu__atalhos ul {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  background: #53e622;
+  display: block;
+  z-index: 90;
+  box-shadow: -7px 10px 25px -14px rgba(0, 0, 0, 0.64);
+  animation: vemMenu 0.3s ease both;
+}
+
+.atalhos {
+  display: none;
+}
