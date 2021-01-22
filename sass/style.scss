@@ -16,7 +16,8 @@ body {
 
 
 .d__flex {
-    display: flex
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -125,14 +126,18 @@ body {
     }
 }
 
+
+
 .smart__cards {
     z-index: 10;
+    overflow: hidden;
 
     .d__flex {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .col-lg-3{
+
+    .col-lg-3 {
         min-width: 270px;
         margin-bottom: 20px;
 
@@ -150,18 +155,38 @@ body {
         background: white;
         transition: 0.4s ease;
 
+        @include d(m) {
+            display: flex;
+            align-items: center;
+            height: initial;
+            padding: 15px 30px;
+            margin: 0 auto;
+        }
+
         h3 {
             font-size: 22px;
             margin-bottom: 20px;
             font-weight: bold;
+            transition: 0.4s ease;
+
+            @include d(m) {
+                margin-left: 10px;
+                font-size: 18px;
+
+            }
         }
 
         svg path,
         svg rect {
             transition: 0.4s ease;
         }
-        svg{
+
+        svg {
             transition: 0.4s ease;
+
+            @include d(m) {
+                width: 50px;
+            }
 
         }
 
@@ -172,6 +197,12 @@ body {
                 fill: black;
             }
         }
+
+        p {
+            @include d(m) {
+                display: none;
+            }
+        }
     }
 
     .card__roxo {
@@ -180,7 +211,170 @@ body {
 
         &:hover {
             svg {
-                transform: translateX(20px );
+                transform: translateX(30px);
+
+                @include d(m) {
+                    transform: translateX(10px);
+
+                }
+
+            }
+
+            h3 {
+                color: $preto-1;
+            }
+        }
+
+        @include d(m) {
+            svg {
+                width: 40px;
+            }
+
+            li:first-child {
+                order: 2;
+
+            }
+
+            h3 {
+                margin-right: 20px;
+                margin-left: initial;
+            }
+        }
+    }
+
+
+}
+
+.scroll__ativou {
+    .card__roxo {
+        svg {
+            transform: translateX(20px);
+
+
+
+        }
+
+        svg path,
+        svg rect {
+            fill: black;
+        }
+
+        h3 {
+            color: $preto-1;
+        }
+
+    }
+}
+
+#gallery {
+    padding-bottom: 100px;
+    margin-top: 180px;
+    background: $preto-1;
+
+    @include d(m) {
+        margin-top: 40px;
+        background: transparent;
+
+    }
+
+    .gallery__grid {
+        position: relative;
+        top: 0px;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        //grid-template-rows: 200px 300px;
+        grid-template-areas:
+            "fota1 fota2 fota3"
+            "fota1 fota2 fota5"
+            "fota4 fota2 fota5"
+            "fota4 fota2 fota5 ";
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .gallery__1 {
+        grid-area: fota1;
+    }
+
+    .gallery__2 {
+        grid-area: fota4;
+    }
+
+    .gallery__3 {
+        grid-area: fota2;
+    }
+
+    .gallery__4 {
+        grid-area: fota3;
+    }
+
+    .gallery__5 {
+        grid-area: fota5;
+    }
+
+    .relogio {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 250px;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+}
+
+#hans {
+    color: $preto-1;
+    padding: 80px 0;
+    padding-top: 120px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 70px;
+
+        @include d(m) {
+            margin: 30px 0;
+        }
+    }
+}
+
+
+#footer {
+    padding: 40px 0;
+    padding-bottom:80px;
+    background: $preto-1;
+    .footer__wrapper{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .footer__socias{
+        justify-content: space-around;
+        @include d(m){
+            margin-top:20px;
+        }
+    }
+    .col-lg-4{
+        @include d(m){
+            padding-bottom:40px;
+        }
+        p{
+            margin-top:40px;
+        }
+    }
+
+    ul {
+        li {
+            margin-bottom:8px;
+
+            a {
+                color: white;
 
             }
         }
