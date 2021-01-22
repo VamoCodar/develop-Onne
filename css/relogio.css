@@ -1,0 +1,89 @@
+
+
+
+
+/* CSS GERAL */
+
+#gallery  .relogio {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 620px;
+    zoom: .5;
+    bottom: 150px;
+
+
+    
+}
+
+
+
+#gallery  .relogio img {
+    margin: 0 auto;
+}
+
+
+
+.clock {
+    width: 620px;
+    height: 620px;
+    display: block;
+    position: absolute;
+    left: 23%;
+}
+
+.segundos {
+    width: 620px;
+    height: 620px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(../img/watchface_01.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    z-index: 5;
+}
+
+.minutos {
+    width: 580px;
+    height: 580px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(../img/watchface_02.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    z-index: 5;
+}
+
+.horas {
+    width: 315px;
+    height: 315px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(../img/watchface_03.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+
+
+
