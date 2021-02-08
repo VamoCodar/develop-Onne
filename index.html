@@ -100,7 +100,7 @@
                     <a class="button__roxo" href="#">Baixe o App <ion-icon class="icon__download"
                             name="download-outline">
                         </ion-icon></a>
-                    <a class="button__roxo button__saiba" href="#">Saiba Mais <ion-icon class="icon__down"
+                    <a class="button__roxo button__saiba" href="#smart">Saiba Mais <ion-icon class="icon__down"
                             name="chevron-down-outline">
                         </ion-icon>
                         </ion-icon></a>
@@ -330,9 +330,58 @@
 
             </div>
             <div class="buttons__baixar">
-                <a href="#"><ion-icon class="baixar__icon" name="logo-apple"></ion-icon>App Store</a>
-                <a href="#"><ion-icon class="baixar__icon" name="logo-google-playstore"></ion-icon>Google Play</a>
+                <a href="#">
+                    <ion-icon class="baixar__icon" name="logo-apple"></ion-icon>App Store
+                </a>
+                <a href="#">
+                    <ion-icon class="baixar__icon" name="logo-google-playstore"></ion-icon>Google Play
+                </a>
             </div>
+
+
+    </section>
+    <section id="produtos">
+        <div class="container">
+            <h1>Nossos produtos</h1>
+
+            <div class="produtos__wrapper">
+
+                <ul class="col-lg-3">
+                    <li class="produto__img-container"><img src="img/produto-1.png" alt="relogio"></li>
+                    <li>
+                        <h2>Lorem Ipsum has</h2>
+                    </li>
+                    <li>
+                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                    </li>
+                    <li><a href="#">Continuar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
+                        </a></li>
+                </ul>
+                <ul class="col-lg-3">
+                    <li class="produto__img-container"><img src="img/produto-2.png" alt="relogio"></li>
+                    <li>
+                        <h2>Lorem Ipsum has</h2>
+                    </li>
+                    <li>
+                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                    </li>
+                    <li><a href="#">Continuar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
+                        </a></li>
+                </ul>
+                <ul class="col-lg-3">
+                    <li class="produto__img-container"><img src="img/produto-3.png" alt="relogio"></li>
+                    <li>
+                        <h2>Lorem Ipsum has</h2>
+                    </li>
+                    <li>
+                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                    </li>
+                    <li><a href="#">Continuar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 
     <footer id="footer">
@@ -410,7 +459,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <!--  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
 
-    <!-- <script type="text/javascript" src="js/relogio-onne.js"></script> -->
+    <script type="text/javascript" src="js/relogio-onne.js"></script>
     <script>
         //gsap animation =================
         const timeline = new TimelineMax();
@@ -600,6 +649,19 @@
             }
         }
         imageIntroMobile()
+
+        $('a[href^="#"]').on('click', function(e) {
+         e.preventDefault();
+          var id = $(this).attr('href'),
+           targetOffset = $(id).offset().top;
+
+         $('html, body').animate({ 
+              scrollTop: targetOffset
+          }, 700);
+ });
+
+      
+
         menuItem.addEventListener("click", menuMobile); //click menu mobile
         itemMenu.forEach((i) => i.addEventListener("click", menuMobile)); //fecha on click
         document.addEventListener("resize", imageIntroMobile)
