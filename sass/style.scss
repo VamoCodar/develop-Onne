@@ -577,11 +577,18 @@ body#page__home {
             h3 {
                 margin: 0;
                 font-size: 20px;
+                @include d(s){
+                    font-size:16px;
+                }
             }
 
             ion-icon {
                 font-size: 28px;
                 margin-right: 10px;
+                @include d(s){
+                font-size: 22px;
+
+                }
             }
         }
 
@@ -593,12 +600,18 @@ body#page__home {
                 margin-top: 10px;
                 margin-bottom: 20px;
                 max-width: 450px;
-                color: rgb(216, 216, 216)
+                color: rgb(216, 216, 216);
+                @include d(s){
+                    font-size:14px;
+                }
             }
 
             h2 {
                 margin-bottom: 30px;
                 font-size: 32px;
+                @include d(s){
+                    text-align:center;
+                }
             }
         }
 
