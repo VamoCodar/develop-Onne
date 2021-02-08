@@ -1,6 +1,6 @@
 body#page__autor {
     font-family: 'Open Sans', sans-serif;
-   
+
     color: white;
     overflow-x: hidden;
 }
@@ -65,7 +65,8 @@ a[href="#autor"] {
             /* left: 0px; */
             right: 90px;
             bottom: -270px;
-pointer-events: none;
+            pointer-events: none;
+
             @include d(m) {
                 max-width: 280px;
                 left: 0;
@@ -92,21 +93,30 @@ pointer-events: none;
         align-items: center;
         justify-content: center;
         gap: 100px;
+
         a {
             color: $roxo;
             display: inline-flex;
             margin-right: 10px;
             align-items: center;
             transition: 0.4s ease-in-out;
-            .icon__sobre{
-            transition: 0.4s ease-in-out;
+
+            .icon__sobre {
+                transition: 0.4s ease-in-out;
 
             }
-            &:hover{
-                .icon__sobre{
+
+            &:hover {
+                .icon__sobre {
                     transform: translateX(10px);
                 }
             }
+        }
+
+        @include d(m) {
+            gap: 30px;
+            flex-flow: column;
+            font-size: 14px;
         }
     }
 }
