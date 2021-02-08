@@ -10,7 +10,7 @@
 </head>
 
 
-<body id="page-home">
+<body id="page__home">
 
 
     <!-- menu DESKTOP ======================= -->
@@ -28,6 +28,7 @@
                     <li><a href="#">Produtos</a></li>
                     <li><a href="#">Como Funciona</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li><a href="#">Autor</a></li>
                 </ul>
                 <ul class="menu__sociais">
                     <li><a href="#">
@@ -82,9 +83,28 @@
     <section id="intro">
         <div class="container">
             <div class="intro__text">
-                <span>02</span>
-                <h1>Deixe o flow <br> guiar você para o infinito e além </h1>
-                <a class="button__roxo" href="#">Baixe o App</a>
+                <span>
+                    <div class="relogiosOnne skrollable skrollable-between relogio relogio__1"
+                        data-start="transform: translateY(100px)" data-end="transform: translateY(-200px)"
+                        style="transform: translateY(15.9576px);">
+
+                        <div class="clock">
+                            <div class="horas" style="transform: rotate(441.454deg);"></div>
+                            <div class="minutos" style="transform: rotate(257.448deg);"></div>
+                            <div class="segundos" style="transform: rotate(326.88deg);"></div>
+                        </div>
+                    </div>
+                </span>
+                <h1>Deixe o <strong>flow</strong><br> guiar você para o infinito e além </h1>
+                <div class="button__intro">
+                    <a class="button__roxo" href="#">Baixe o App <ion-icon class="icon__download"
+                            name="download-outline">
+                        </ion-icon></a>
+                    <a class="button__roxo button__saiba" href="#">Saiba Mais <ion-icon class="icon__down"
+                            name="chevron-down-outline">
+                        </ion-icon>
+                        </ion-icon></a>
+                </div>
             </div>
         </div>
         <div class="img__bg">
@@ -263,20 +283,56 @@
 
     <section id="hans">
         <div class="container">
+            <h1>Como Funciona</h1>
             <div class="d__flex">
-                <div class="col-md-5"><img src="img/hans-donner.png" alt="hans donner"></div>
-                <div class="col-md-7">
-                    <h2>Hans Donner</h2>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                        their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
-                        purpose (injected humour and the like).</p>
+                <div class="col-lg-8 como__funciona-text">
+                    <ul class="como__funciona-ul">
+                        <li>
+                            <h2>Esteja Presente no momento</h2>
+                        </li>
+                        <li class="titulo__como">
+                            <ion-icon name="play-skip-forward-outline"></ion-icon>
+                            <h3>Inicie com suas musicas favoritas</h3>
+                        </li>
+                        <li>
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer
+                            </p>
+                        </li>
+                        <li class="titulo__como">
+                            <ion-icon name="images-outline"></ion-icon>
+                            <h3>Guarde imagens do momento</h3>
+                        </li>
+                        <li>
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer
+                            </p>
+                        </li>
+
+                        <li class="titulo__como">
+                            <ion-icon name="ellipse-outline"></ion-icon>
+                            <h3>Crie momentos flow</h3>
+                        </li>
+                        <li>
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer
+                            </p>
+                        </li>
+                    </ul>
                 </div>
+                <div class="card__smart col-lg-4">
+                    <!-- <img src="img/smartphone.png" alt="smartphne"> -->
+                    <img src="img/cel-1.png" alt="smartphne">
+                    <img src="img/cel-1.png" alt="smartphne">
+                    <img src="img/cel-1.png" alt="smartphne">
+                    <img src="img/cel-1.png" alt="smartphne">
+                </div>
+
             </div>
-        </div>
+            <div class="buttons__baixar">
+                <a href="#"><ion-icon class="baixar__icon" name="logo-apple"></ion-icon>App Store</a>
+                <a href="#"><ion-icon class="baixar__icon" name="logo-google-playstore"></ion-icon>Google Play</a>
+            </div>
     </section>
 
     <footer id="footer">
@@ -330,6 +386,9 @@
 
 
     <!-- scripts ========================================================================================== -->
+    <!-- iconicons  -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -351,7 +410,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <!--  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
 
-    <script type="text/javascript" src="js/relogio-onne.js"></script>
+    <!-- <script type="text/javascript" src="js/relogio-onne.js"></script> -->
     <script>
         //gsap animation =================
         const timeline = new TimelineMax();
@@ -396,8 +455,26 @@
                 x: 0,
                 opacity: 1,
 
+            })
+            .to(".smart__cards .card__4 ul", .4, {
+                background: "#cf44f9",
+                color: "white",
 
             })
+            .to(".smart__cards .card__4 svg path", .4, {
+                fill: "white",
+
+
+            })
+            .to(".smart__cards .card__4 svg ", .4, {
+                x: 30,
+
+
+            })
+
+
+
+
 
 
 
@@ -422,10 +499,24 @@
                 }, 1700);
             });
 
+        var sceneSmartphone = new ScrollMagic.Scene({
+                triggerElement: "#hans",
+                duration: 0,
+                offset: 150,
+                triggerHook: .4,
+
+
+            })
+            .setClassToggle("body", "ativaCard")
+        /*  .addIndicators({
+             name: "cards"
+         }) */
+
 
 
         controller.addScene([
             sceneCards,
+            sceneSmartphone,
 
         ]);
 
@@ -441,14 +532,14 @@
             horizontal: false
         });
 
-           var rellax = new Rellax('.gallery__grid', {
-               speed: 1,
-               center: false,
-               wrapper: null,
-               round: true,
-               vertical: true,
-               horizontal: false
-           });
+        var rellax = new Rellax('.gallery__grid', {
+            speed: 1,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        });
 
 
         // menu mobile =========================
@@ -513,7 +604,6 @@
         itemMenu.forEach((i) => i.addEventListener("click", menuMobile)); //fecha on click
         document.addEventListener("resize", imageIntroMobile)
         window.addEventListener("scroll", menuPreenchido);
-        
     </script>
 </body>
 
