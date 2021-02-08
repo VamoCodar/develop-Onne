@@ -1,0 +1,39 @@
+#footer {
+    padding: 40px 0;
+    padding-bottom: 80px;
+    background: $preto-1;
+
+    .footer__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__socias {
+        justify-content: space-around;
+
+        @include d(m) {
+            margin-top: 20px;
+        }
+    }
+
+    .col-lg-4 {
+        @include d(m) {
+            padding-bottom: 40px;
+        }
+
+        p {
+            margin-top: 40px;
+        }
+    }
+
+    ul {
+        li {
+            margin-bottom: 8px;
+
+            a {
+                color: white;
+
+            }
+        }
+    }
+}

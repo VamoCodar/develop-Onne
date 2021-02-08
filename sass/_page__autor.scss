@@ -1,0 +1,112 @@
+body#page__autor {
+    font-family: 'Open Sans', sans-serif;
+   
+    color: white;
+    overflow-x: hidden;
+}
+
+a[href="#autor"] {
+    color: $roxo "important;"
+}
+
+
+#page__autor {
+    .sobre__wrapper {
+        align-items: center;
+    }
+
+    #sobre {
+        padding-top: 140px;
+        color: $preto-1;
+        padding-bottom: 80px;
+
+
+
+    }
+
+    .descricao {
+        position: relative;
+
+        @include d(m) {
+            padding-bottom: 60px;
+        }
+
+        h2 {
+            color: $roxo;
+            font-size: 42px;
+            position: relative;
+            margin-bottom: 30px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                display: block;
+                height: 3px;
+                width: 30px;
+                background: $roxo;
+                left: 0;
+            }
+
+            @include d(s) {
+                margin-top: 20px;
+            }
+        }
+
+        &:after {
+            content: "";
+            @include bg-props-contain;
+            background-image: url(../img/assinatura.svg);
+
+            width: 500px;
+            height: 400px;
+            display: block;
+            position: absolute;
+            /* left: 0px; */
+            right: 90px;
+            bottom: -270px;
+pointer-events: none;
+            @include d(m) {
+                max-width: 280px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: -190px;
+
+            }
+        }
+
+    }
+
+    .sobre__img {
+        img {
+            width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    .veja__mais {
+        margin-top: 80px;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        a {
+            color: $roxo;
+            display: inline-flex;
+            margin-right: 10px;
+            align-items: center;
+            transition: 0.4s ease-in-out;
+            .icon__sobre{
+            transition: 0.4s ease-in-out;
+
+            }
+            &:hover{
+                .icon__sobre{
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}

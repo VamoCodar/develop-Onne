@@ -1,0 +1,111 @@
+#produtos {
+    padding: 60px 0;
+    color: $preto-1;
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 60px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            display: block;
+            height: 2px;
+            width: 100px;
+            background: $preto-1;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        @include d(s) {
+            font-size: 32px;
+        }
+
+    }
+
+    .produtos__wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap row;
+
+        @include d(m) {
+            flex-wrap: wrap;
+        }
+
+        ul {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                width: 200px;
+                margin: 0 auto;
+            }
+
+            img {
+
+                // position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+            }
+
+            .produto__img-container {
+                position: relative;
+                margin: 0 auto;
+                height: 220px;
+                margin-bottom: 20px;
+                width: 200px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    display: block;
+                    height: 1px;
+                    width: 30px;
+                    background: rgb(167, 167, 167);
+                    left: 0;
+                }
+            }
+
+            p {
+                color: rgb(40, 40, 40);
+                margin: 10px 0;
+                font-size: 14px;
+
+            }
+
+            a {
+                color: $roxo;
+                margin-right: 10px;
+                display: inline-flex;
+                align-items: center;
+
+                .icon__produtos {
+                    transition: 0.3s ease;
+                }
+
+                &:hover {
+                    .icon__produtos {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}

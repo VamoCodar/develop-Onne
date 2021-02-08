@@ -1,0 +1,595 @@
+a[href="#inicio"] {
+    color: $roxo "important;"
+}
+
+
+
+#intro {
+    height: 100vh;
+    min-height: 700px;
+    /*  background-image: url(../img/bg-intro.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top; */
+    width: 100%;
+    padding-top: 100px;
+
+}
+
+#intro {
+    position: relative;
+
+    .img__bg {
+        position: absolute;
+        top: 0;
+        z-index: -9;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            object-fit: cover;
+
+            @include d(m) {
+                filter: brightness(35%);
+                object-position: left;
+            }
+        }
+    }
+
+    .intro__text {
+        @include d(ll) {
+            margin-top: 100px;
+        }
+
+        @include d(s) {
+            margin-top: -50px;
+        }
+
+        span {
+            width: 200px;
+            height: 220px;
+            display: block;
+            padding-bottom: 0px;
+            border-bottom: 10px solid $roxo;
+            position: relative;
+            border-radius: 8px;
+
+            @include d(m) {
+                height: 280px;
+                margin: 0 auto;
+
+            }
+
+            .relogio__1 {
+                zoom: .30;
+                position: absolute;
+                margin-left: 30px;
+                will-change: transform;
+
+                @include d(s) {
+                    top: 200px;
+                    zoom: .30;
+                    // left:50px;
+                }
+            }
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 50px;
+            font-weight: bold;
+
+            strong {
+                color: transparent !important;
+                text-transform: uppercase;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: white;
+            }
+
+            @include d(m) {
+                font-size: 40px;
+                text-align: center;
+
+            }
+
+            @include d(ss) {
+                font-size: 32px;
+            }
+        }
+
+        .button__intro {
+            @include d(m) {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .button__roxo {
+            padding: 15px 40px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+            background: $roxo;
+            color: white;
+            margin-top: 50px;
+            display: inline-flex;
+            align-items: center;
+            transition: 0.4s ease;
+            border: 2px solid transparent;
+
+            @include d(m) {
+                //  display: block;
+                //  text-align: center;
+                //  margin: 0 auto;
+                //font-size: 16px;
+                padding: 15px 25px;
+
+            }
+
+            ion-icon {
+                margin-left: 10px;
+                font-size: 22px;
+            }
+
+            &:hover {
+                background: transparent;
+                color: $roxo;
+                border: 2px solid $roxo;
+            }
+        }
+
+        .button__saiba {
+            @include d(m) {
+                display: none;
+            }
+        }
+
+        .button__roxo+.button__roxo {
+            margin-left: 30px;
+        }
+    }
+
+}
+
+
+#smart {
+    .smartphone {
+        height: 350px;
+
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            top: 0px;
+            //z-index: 2;
+        }
+    }
+}
+
+
+
+.smart__cards {
+    z-index: 10;
+    overflow: hidden;
+
+    .d__flex {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .col-lg-3 {
+        min-width: 270px;
+        margin-bottom: 20px;
+
+    }
+
+    ul {
+        padding: 30px 20px;
+        border-radius: 20px;
+        color: black;
+        //box-shadow: -1px 15px 18px -3px rgba(0,0,0,0.18);
+        box-shadow: -6px 7px 18px 0px rgba(0, 0, 0, 0.18);
+        max-width: 320px;
+        height: 300px;
+        max-height: 350px;
+        background: white;
+        transition: 0.4s ease;
+
+        @include d(m) {
+            display: flex;
+            align-items: center;
+            height: initial;
+            padding: 15px 30px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: 0.4s ease;
+
+            @include d(m) {
+                margin-left: 10px;
+                font-size: 18px;
+                margin-bottom: 0px;
+
+
+            }
+        }
+
+        svg path,
+        svg rect {
+            transition: 0.4s ease;
+        }
+
+        svg {
+            transition: 0.4s ease;
+
+            @include d(m) {
+                width: 50px;
+            }
+
+        }
+
+        &:hover {
+
+            svg path,
+            svg rect {
+                fill: black;
+            }
+        }
+
+        p {
+            @include d(m) {
+                display: none;
+            }
+        }
+    }
+
+    .card__roxo {
+        /* background: #cf44f9;
+        color: white; */
+        background: white;
+        color: black;
+
+        &:hover {
+            svg {
+                transform: translateX(30px);
+
+                @include d(m) {
+                    transform: translateX(30px);
+
+                }
+
+            }
+
+            h3 {
+                color: $preto-1;
+            }
+        }
+
+        @include d(m) {
+            svg {
+                width: 40px;
+            }
+
+            li:first-child {
+                order: 2;
+
+            }
+
+            h3 {
+                margin: 0;
+                margin-right: 20px;
+                margin-left: initial;
+            }
+        }
+
+        svg path,
+        svg rect {
+            fill: black;
+        }
+    }
+
+
+}
+
+.scroll__ativou {
+    .card__roxo {
+        svg {
+            transform: translateX(20px);
+
+
+
+        }
+
+        svg path,
+        svg rect {
+            fill: black;
+        }
+
+        h3 {
+            color: $preto-1;
+        }
+
+    }
+}
+
+#gallery {
+    padding-bottom: 100px;
+    margin-top: 180px;
+    background: $preto-1;
+    position: relative;
+
+    @include d(m) {
+        // background: transparent;
+
+        margin-top: 40px;
+        height: 300px;
+        background-image: url(../img/quebra.png);
+        //  background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .gallery__relative {
+        position: relative;
+
+    }
+
+    .gallery__grid {
+        //position: relative;
+        //top: 120px;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        //grid-template-rows: 200px 300px;
+        grid-template-areas:
+            "fota1 fota2 fota3"
+            "fota1 fota2 fota5"
+            "fota4 fota2 fota5"
+            "fota4 fota2 fota5 ";
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .gallery__1 {
+        grid-area: fota1;
+    }
+
+    .gallery__2 {
+        grid-area: fota4;
+    }
+
+    .gallery__3 {
+        grid-area: fota2;
+    }
+
+    .gallery__4 {
+        grid-area: fota3;
+    }
+
+    .gallery__5 {
+        grid-area: fota5;
+    }
+
+    .relogio {
+        @include d(m) {
+            bottom: -650px;
+            zoom: .3;
+        }
+    }
+
+    .clock {
+        left: initial;
+    }
+
+}
+
+#hans {
+    @include bg-props-cover;
+    background-image: url(../img/bg-degrade.jpg);
+    color: white;
+    padding: 80px 0;
+    padding-top: 180px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 70px;
+
+        @include d(m) {
+            margin: 30px 0;
+        }
+    }
+
+    .container {
+        @include d(m) {
+            overflow: hidden;
+        }
+    }
+
+    @include d(s) {
+        background-image: url(../img/bg-mobile.png);
+
+    }
+}
+
+
+
+
+.card__smart {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform: rotate(-30deg) skew(25deg) scale(.8);
+    transition: 0.5s;
+    margin-top: 200px;
+
+    img {
+        position: absolute;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    @include d(ll) {
+        left: -150px;
+        margin-bottom: 190px;
+    }
+
+    @include d(m) {
+        margin: 0 auto;
+        margin-top: 200px;
+        width: 200px;
+        order: -1;
+        margin-bottom: -100px;
+    }
+}
+
+&.ativaCard .card__smart img:nth-child(4) {
+    transform: translate(160px, -160px);
+    opacity: 1;
+}
+
+&.ativaCard .card__smart img:nth-child(3) {
+    transform: translate(120px, -120px);
+    opacity: .8;
+}
+
+&.ativaCard .card__smart img:nth-child(2) {
+    transform: translate(80px, -80px);
+    opacity: .6;
+}
+
+&.ativaCard .card__smart img:nth-child(1) {
+    transform: translate(40px, -40px);
+    opacity: .4;
+}
+
+#hans {
+    padding-bottom: 60px;
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 900px;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            display: block;
+            height: 2px;
+            width: 100px;
+            background: white;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .titulo__como {
+        display: inline-flex;
+        align-items: center;
+
+        h3 {
+            margin: 0;
+            font-size: 20px;
+
+            @include d(s) {
+                font-size: 16px;
+            }
+        }
+
+        ion-icon {
+            font-size: 28px;
+            margin-right: 10px;
+
+            @include d(s) {
+                font-size: 22px;
+
+            }
+        }
+    }
+
+    .como__funciona-ul {
+        margin-top: 60px;
+
+        p {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            max-width: 450px;
+            color: rgb(216, 216, 216);
+
+            @include d(s) {
+                font-size: 14px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+
+            @include d(s) {
+                text-align: center;
+            }
+        }
+    }
+
+    .buttons__baixar {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 20px;
+        gap: 50px;
+
+        @include d(ll) {
+            margin-top: -80px;
+        }
+
+        a {
+            display: inline-flex;
+            padding: 15px 40px;
+            background: transparent;
+            border: 2px solid $roxo;
+            font-size: 20px;
+            border-radius: 20px;
+            color: $roxo;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.4s ease;
+            font-weight: 500;
+            z-index: 99;
+
+            &:hover {
+                background: white;
+                border: 2px solid white;
+
+            }
+
+            .baixar__icon {
+                margin-right: 10px;
+            }
+        }
+
+        @include d(s) {
+            margin: 0 auto;
+            flex-direction: column;
+            max-width: 230px;
+            gap: 25px;
+
+        }
+    }
+}

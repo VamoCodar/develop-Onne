@@ -68,6 +68,50 @@
     margin: 0 20px;
     margin-top: 5px;
   }
+
+  .produtos__link {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.903);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    //top:30px;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: rgba(16, 16, 16, 0.803);
+  }
+
+  /* Show the dropdown menu on hover */
+  .produtos__link:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
 }
 
 /* .fixed-top{
@@ -237,7 +281,7 @@
 
 .menu__open .atalhos {
   display: block;
-  
+
   background: rgba(0, 0, 0, 0.94);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -254,13 +298,13 @@
   box-shadow: -7px 10px 25px -14px rgba(0, 0, 0, 0.84);
   margin-top: 22px;
   z-index: 20;
+
   li {
     margin-bottom: 25px;
-  
+
     a {
       text-transform: uppercase;
       color: white;
     }
   }
 }
-

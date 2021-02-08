@@ -25,7 +25,13 @@
 
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Produtos</a></li>
+                    <li class="produtos__link"><a  href="#">Produtos</a>
+                        <div class="dropdown-content">
+                            <a href="#">Móveis</a>
+                            <a href="#">Luminárias</a>
+                            <a href="#">Arquitetura</a>
+                        </div>
+                    </li>
                     <li><a href="#">Como Funciona</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="#">Autor</a></li>
@@ -656,7 +662,7 @@
            targetOffset = $(id).offset().top;
 
          $('html, body').animate({ 
-              scrollTop: targetOffset
+              scrollTop: targetOffset - 100
           }, 700);
  });
 
