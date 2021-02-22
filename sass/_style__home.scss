@@ -34,6 +34,8 @@ a[href="#inicio"] {
             height: 100%;
             object-fit: cover;
 
+            width: 100%;
+
             @include d(m) {
                 filter: brightness(35%);
                 object-position: left;
@@ -55,7 +57,7 @@ a[href="#inicio"] {
             height: 220px;
             display: block;
             padding-bottom: 0px;
-            border-bottom: 10px solid $roxo;
+            //  border-bottom: 10px solid $roxo;
             position: relative;
             border-radius: 8px;
 
@@ -186,11 +188,11 @@ a[href="#inicio"] {
     .col-lg-3 {
         min-width: 270px;
         margin-bottom: 20px;
-
+        text-align: center;
     }
 
     ul {
-        padding: 30px 20px;
+        padding: 20px 20px;
         border-radius: 20px;
         color: black;
         //box-shadow: -1px 15px 18px -3px rgba(0,0,0,0.18);
@@ -200,20 +202,30 @@ a[href="#inicio"] {
         max-height: 350px;
         background: white;
         transition: 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @include d(m) {
             display: flex;
             align-items: center;
             height: initial;
-            padding: 15px 30px;
+            padding: 20px 20px;
             margin: 0 auto;
         }
 
+        p {
+            font-size: 14px;
+            color: rgb(22, 22, 22);
+        }
+
         h3 {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 20px;
             font-weight: bold;
-            transition: 0.4s ease;
+            transition: .4s ease;
+            margin: 10px 0;
+            line-height: 140%;
 
             @include d(m) {
                 margin-left: 10px;
@@ -231,6 +243,7 @@ a[href="#inicio"] {
 
         svg {
             transition: 0.4s ease;
+            width: 60px !important;
 
             @include d(m) {
                 width: 50px;
@@ -265,6 +278,11 @@ a[href="#inicio"] {
 
                 @include d(m) {
                     transform: translateX(30px);
+
+                }
+
+                path {
+                    fill: #080808 !important;
 
                 }
 
@@ -325,7 +343,7 @@ a[href="#inicio"] {
 #gallery {
     padding-bottom: 100px;
     margin-top: 180px;
-    background: $preto-1;
+    background: #080808;
     position: relative;
 
     @include d(m) {
@@ -333,10 +351,10 @@ a[href="#inicio"] {
 
         margin-top: 40px;
         height: 300px;
-        background-image: url(../img/quebra.png);
-        //  background-attachment:fixed;
+        background-image: url(../img/img-2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
 
     }
 
@@ -346,25 +364,34 @@ a[href="#inicio"] {
     }
 
     .gallery__grid {
-        //position: relative;
+        // position: relative;
+        // bottom: -100px;
         //top: 120px;
         display: grid;
         grid-gap: 30px;
         grid-template-columns: 1fr 1fr 1fr;
         //grid-template-rows: 200px 300px;
+        // transition: .1s ease-in-out;
         grid-template-areas:
             "fota1 fota2 fota3"
-            "fota1 fota2 fota5"
+            "fota1 fota2 fota3"
             "fota4 fota2 fota5"
             "fota4 fota2 fota5 ";
 
         @include d(m) {
             display: none;
         }
+
+        img {
+            border-radius: 20px;
+            object-fit: cover;
+            height: 100%;
+
+        }
     }
 
     .gallery__1 {
-        grid-area: fota1;
+        grid-area: fota3;
     }
 
     .gallery__2 {
@@ -373,14 +400,16 @@ a[href="#inicio"] {
 
     .gallery__3 {
         grid-area: fota2;
+        margin: 0 auto;
+
     }
 
     .gallery__4 {
-        grid-area: fota3;
+        grid-area: fota5;
     }
 
     .gallery__5 {
-        grid-area: fota5;
+        grid-area: fota1;
     }
 
     .relogio {
@@ -592,4 +621,112 @@ a[href="#inicio"] {
 
         }
     }
+
+}
+
+#quebra {
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    max-width: 800px;
+
+
+    p {
+        font-style: italic;
+        color: rgb(33, 33, 33);
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+#download {
+    height: 100vh;
+    position: relative;
+
+    >img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8)
+    }
+
+
+
+    .download {
+        height: 100%;
+
+        &__text {
+            width: 40%;
+            display: inline-flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            z-index: 2;
+            gap: 20px;
+            height: 70vh;
+
+            @include d(m) {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: clamp(50px, 6vw, 90px);
+                white-space: nowrap;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -8px;
+                    display: block;
+                    height: 4px;
+                    width: 100px;
+                    background: #fff;
+                    left: 0;
+                }
+
+                @include d(ss) {
+                    font-size: 42px;
+                    ;
+                }
+            }
+
+            h2 {
+                font-size: clamp(22px, 3vw, 40px);
+
+            }
+
+        }
+
+        &__btn-wrapper {
+
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            height: 30vh;
+            align-items: flex-end;
+
+            @include d(m) {
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+
+            }
+
+            a {
+                display: contents;
+            }
+
+            img {
+                width: 200px;
+                z-index: 10;
+                cursor: pointer;
+                object-fit: contain;
+                height: 150px;
+            }
+        }
+
+    }
+
+
 }

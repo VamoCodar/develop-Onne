@@ -308,3 +308,13 @@
     }
   }
 }
+
+@media (max-width:1200px) {
+  .menu .menu__wrapper ul li+li {
+    margin-left: 10px;
+  }
+
+  .menu .container {
+    max-width: 1200px
+  }
+}
