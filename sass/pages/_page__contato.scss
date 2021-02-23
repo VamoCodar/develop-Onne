@@ -1,0 +1,29 @@
+& {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    overflow-x: hidden;
+}
+
+.menu {
+    @include menu-ativo;
+}
+
+
+a[href="#contato"] {
+    color: $roxo;
+}
+
+#page__contato{
+    margin-top: 100px;
+}
+
+.formulario{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .field{
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: 15px;
+    }
+}

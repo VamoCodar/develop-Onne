@@ -1,0 +1,28 @@
+$preto-1:#020202;
+$roxo:#cf44f9;
+
+@mixin menu-ativo {
+    height: 80px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.803);
+}
+
+
+.d__flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin bg-props-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@mixin bg-props-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}

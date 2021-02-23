@@ -4,131 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/relogio.css">
+    <!-- <link rel="stylesheet" href="css/relogio.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title>Onne</title>
 </head>
 
 
-<body id="page__produtos" class="ativo__scrool body__produtos">
+<body class="body__contato">
 
+    <main id="page__contato">
 
-    <section id="intro">
         <div class="container">
-            <h1>Veja Nossos produtos</h1>
+
+            <div class="d__flex">
+
+                <div class="col-lg-6">
+                    <div class="img__container">
+                        <img src="img/loguin.jpg" alt="loguin">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="formulario" method="post">
+                        <p> Envie nos uma mensagem </p>
+
+                        <div class="field">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone">
+                        </div>
+
+                        <div class="field">
+                            <label for="email">E-Mail:</label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+                        </div>
+                        <!-- <div class="field radiobox">
+                <span>Deseja receber nossas novidades?</span>
+                <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+                <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
+            </div> -->
+                        <div class="field">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" required></textarea>
+                        </div>
+
+                        <input type="submit" name="acao" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
         </div>
-    </section>
-    <section id="categorias">
-        <div class="container">
-            <ul class="d__flex catego__wrapper">
-                <li> <a class="active" href="#">Móveis</a></li>
-                <li> <a href="#">Luminárias</a></li>
-                <li> <a href="#">Projetos</a></li>
-                <li class="catego__ver"> <a href="#">Ver todas Categorias <ion-icon name="chevron-down-outline" class="ver__icon"></ion-icon></a></li>
+    </main>
+
+
+
+
+
+
+  <!-- menu DESKTOP ======================= -->
+  <nav class="menu fixed-top">
+
+    <div class="container">
+        <div class="menu__wrapper">
+            <a href="index.html" class="logo__1"><img src="img/logo-1.svg" alt="logo"></a>
+            <a href="index.html" class="logo__2"><img src="img/logo-2.svg" alt="logo-2"></a>
+
+            <ul class="menu__links">
+
+                <li><a href="#index.html">Inicio</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#hans">Como Funciona</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li class="produtos__link"><a href="produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="#produtos.html">Móveis</a>
+                        <a href="#produtos.html">Luminárias</a>
+                        <a href="#produtos.html">Arquitetura</a>
+                    </div>
+                </li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="contato.html">Contato</a></li>
 
             </ul>
+            <ul class="menu__sociais">
+                <li><a href="#">
+                        <svg class="icon-face">
+                            <use xlink:href="img/social-defs.svg#icon-facebook-circle"></use>
+                        </svg>
+                        </span></a>
+                </li>
+                <li><a href="#">
+                        <svg class="icon-insta">
+                            <use xlink:href="img/social-defs.svg#icon-isnta-circle"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="#"><svg class="icon-yt">
+                            <use xlink:href="img/social-defs.svg#icon-yt-circle"></use>
+                        </svg></a></li>
+                <li><a href="#"><svg class="icon-twitter">
+                            <use xlink:href="img/social-defs.svg#icon-twitter-circle"></use>
+                        </svg></a></li>
+            </ul>
         </div>
-    </section>
-
-    <section id="produtos">
-        <div class="container">
-            <div class="produtos__wrapper">
-
-                <ul class="col-lg-3">
-                    <li class="produto__img-container"><img src="img/produto-1.png" alt="relogio"></li>
-                    <li>
-                        <h2></h2>
-                    </li>
-                    <li>
-                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
-                    </li>
-                    <li><a href="#">Comprar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
-                        </a></li>
-                </ul>
-
-                <ul class="col-lg-3">
-                    <li class="produto__img-container"><img src="img/produto-2.png" alt="relogio"></li>
-                    <li>
-                        <h2>Lorem Ipsum has</h2>
-                    </li>
-                    <li>
-                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
-                    </li>
-                    <li><a href="#">Comprar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
-                        </a></li>
-                </ul>
-
-                <ul class="col-lg-3">
-                    <li class="produto__img-container"><img src="img/produto-3.png" alt="relogio"></li>
-                    <li>
-                        <h2>Lorem Ipsum has</h2>
-                    </li>
-                    <li>
-                        <p>Lorem Ipsum has been the industry's standard dummy text</p>
-                    </li>
-                    <li><a href="#">Comprar<ion-icon class="icon__produtos" name="chevron-forward-outline"></ion-icon>
-                        </a></li>
-                </ul>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-    <!-- menu DESKTOP ======================= -->
-    <nav class="menu fixed-top">
-
-        <div class="container">
-            <div class="menu__wrapper">
-                <a href="index.html" class="logo__1"><img src="img/logo-1.svg" alt="logo"></a>
-                <a href="index.html" class="logo__2"><img src="img/logo-2.svg" alt="logo-2"></a>
-
-                <ul class="menu__links">
-
-                    <li><a href="#index.html">Inicio</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#hans">Como Funciona</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li class="produtos__link"><a href="produtos.html">Produtos</a>
-                        <div class="dropdown-content">
-                            <a href="#produtos.html">Móveis</a>
-                            <a href="#produtos.html">Luminárias</a>
-                            <a href="#produtos.html">Arquitetura</a>
-                        </div>
-                    </li>
-                    <li><a href="autor.html">Autor</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-
-                </ul>
-                <ul class="menu__sociais">
-                    <li><a href="#">
-                            <svg class="icon-face">
-                                <use xlink:href="img/social-defs.svg#icon-facebook-circle"></use>
-                            </svg>
-                            </span></a>
-                    </li>
-                    <li><a href="#">
-                            <svg class="icon-insta">
-                                <use xlink:href="img/social-defs.svg#icon-isnta-circle"></use>
-                            </svg>
-                        </a></li>
-                    <li><a href="#"><svg class="icon-yt">
-                                <use xlink:href="img/social-defs.svg#icon-yt-circle"></use>
-                            </svg></a></li>
-                    <li><a href="#"><svg class="icon-twitter">
-                                <use xlink:href="img/social-defs.svg#icon-twitter-circle"></use>
-                            </svg></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
+</nav>
     <!-- MENU MOBILE ====================== -->
     <nav class="menu__mobile fixed-top">
         <div class="container">
@@ -284,15 +266,7 @@
 
 
 
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('href'),
-                targetOffset = $(id).offset().top;
 
-            $('html, body').animate({
-                scrollTop: targetOffset - 100
-            }, 700);
-        });
 
 
 

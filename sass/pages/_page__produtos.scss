@@ -1,16 +1,16 @@
-body#page__produtos {
+& {
     font-family: 'Open Sans', sans-serif;
-
     color: black;
     overflow-x: hidden;
 }
 
-#page__produtos {
+
+
+    @import "../style__produtos";
+
     a[href="#produtos"] {
         color: $roxo;
     }
-
-    @import "style__produtos";
 
     #intro {
         height: 300px;
@@ -30,7 +30,7 @@ body#page__produtos {
             li {
                 display: block;
                 width: 25%;
-                
+
 
                 a {
                     display: inline-block;
@@ -42,28 +42,31 @@ body#page__produtos {
                 a.active {
                     border-bottom: 2px solid $roxo;
                 }
-               
+
             }
-            li:not(li.catego__ver){
-                @include d(m){
-                    display:none;
+
+            li:not(li.catego__ver) {
+                @include d(m) {
+                    display: none;
                 }
             }
-            li.catego__ver{
-               
-                a{
-                    display:inline-flex;
+
+            li.catego__ver {
+
+                a {
+                    display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    .ver__icon{
+
+                    .ver__icon {
                         margin-left: 10px;
                     }
                 }
-                @include d(m){
-                    width:100%;
+
+                @include d(m) {
+                    width: 100%;
                 }
             }
         }
     }
-}

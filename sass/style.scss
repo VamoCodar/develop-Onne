@@ -1,25 +1,21 @@
-$preto-1:#020202;
-$roxo:#cf44f9;
-
+// bootstrap 
 @import "bootstrap__imports";
-@import "reset";
-@import "responsivo";
+
+/* utilitarios e conf */
+@import "../sass/utilities/mixins.scss";
+@import "../sass/utilities/reset";
+@import "../sass/utilities/responsivo";
+@import "../sass/utilities/animation";
+
+// base
+@import "relogio";
 @import "menu";
-@import "animation";
+@import "footer";
 
-
-
-body#page__home {
+body {
     font-family: 'Open Sans', sans-serif;
     color: white;
     overflow-x: hidden;
-}
-
-
-
-.d__flex {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .container {
@@ -28,26 +24,20 @@ body#page__home {
     }
 }
 
-@mixin bg-props-contain {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
 
-@mixin bg-props-cover {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-}
-
-
-#page__home {
-
-    @import "style__home";
+// pages ==============================
+.body__home {
+    @import "../sass/pages/page__home";
     @import "style__produtos";
 }
 
-@import "page__autor";
-@import "page__produtos";
-@import "footer";
+.body__autor {
+    @import "../sass/pages/page__autor";
+}
+
+.body__produtos {
+    @import "../sass/pages/page__produtos";
+}
+.body__contato {
+    @import "../sass/pages/page__contato";
+}
