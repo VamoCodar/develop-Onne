@@ -378,12 +378,12 @@
 
         <div class="container">
             <div class="menu__wrapper">
-                <a href="index.html" class="logo__1"><img src="img/logo-1.svg" alt="logo"></a>
-                <a href="index.html" class="logo__2"><img src="img/logo-2.svg" alt="logo-2"></a>
+                <a href="#page__home" class="logo__1"><img src="img/logo-1.svg" alt="logo"></a>
+                <a href="#page__home" class="logo__2"><img src="img/logo-2.svg" alt="logo-2"></a>
 
                 <ul class="menu__links">
 
-                    <li><a href="#index.html">Inicio</a></li>
+                    <li><a href="#page__home">Inicio</a></li>
                     <li><a href="#download">Download</a></li>
                     <li><a href="#hans">Como Funciona</a></li>
                     <li><a href="#">Sobre</a></li>
@@ -702,7 +702,7 @@
         // imageIntroMobile()
 
         // ancoras da home
-        let celularPosition = 170;
+        let celularPosition = 190;
 
         function ajustes() {
             if (window.innerWidth < 1281) {
@@ -730,6 +730,26 @@
             $('html, body').animate({
                 scrollTop: targetOffset
             }, 700);
+        });
+
+        $('a[href^="#hans"]').on('click', function (e) {
+            e.preventDefault();
+            var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top;
+
+            $('html, body').animate({
+                scrollTop: targetOffset - 80
+            }, 900);
+        });
+
+        $('a[href^="#page__home"]').on('click', function (e) {
+            e.preventDefault();
+            var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top;
+
+            $('html, body').animate({
+                scrollTop: targetOffset 
+            }, 800);
         });
 
 

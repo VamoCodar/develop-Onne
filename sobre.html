@@ -4,72 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/relogio.css"> -->
+    <link rel="stylesheet" href="css/relogio.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Onne</title>
+    <title>Onne - Sobre</title>
 </head>
 
 
-<body class="body__contato">
+<body class="ativo__scrool body__sobre">
 
-    <main id="page__contato">
 
-        <div class="container contato">
-            <h1> Envie nos uma mensagem </h1>
+    <main id="page__sobre">
+        <section id="intro">
+            <div class="container">
+                <h1>Sobre Nós</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duae sunt enim res quoque, ne tu verba solum
+                    putes. Quis est tam dissimile homini. An hoc usque quaque, aliter in vita? Eam stabilem appellas.
 
-            <div class="d__flex">
 
-                <div class="col-lg-5 contato__img">
-                    <div class="img__container">
-                        <img src="img/loguin.jpg" alt="loguin">
+                </p>
+            </div>
+        </section>
+        <section class="sobre">
+            <div class="container">
+                <div class="d-flex sobre__wrapper">
+
+                    <div class="col-lg-6 mx-0 px-0 sobre__img">
+                        <img src="img/team.jpg" alt="time">
                     </div>
+                    <div class="col-lg-6 mx-0 px-0 sobre__text">
+                        <ul>
+                            <li>
+                                <h2>Lorem ipsum dolor sit amet
+                                </h2>
+                            </li>
+                            <li>
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duae sunt enim res quoque
+                                    ne tu verba solum
+                                    putes.</h3>
+                            </li>
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam haec quidem
+                                    praeposita recte et reiecta dicere licebit. Si autem id non concedatur, non continuo
+                                    vita beata tollitur. Quae diligentissime contra Aristonem dicuntur a Chryippo. Haec
+                                    et tu ita posuisti, et verba vestra sunt. Duo Reges: constructio interrete. Quaesita
+                                    enim virtus est, non quae relinqueret naturam, sed quae tueretur. Est autem etiam
+                                    actio quaedam corporis, quae motus et status naturae congruentis tenet; Haec
+                                    para/doca illi, nos admirabilia dicamus.
+
+
+
+                                </p>
+                            </li>
+                        </ul>
+                    </div> 
                 </div>
-                <div class="col-lg-3 contato__form">
-                    <div class="relogiosOnne skrollable skrollable-between relogio relogio__1"
-                        data-start="transform: translateY(100px)" data-end="transform: translateY(-200px)"
-                        style="transform: translateY(15.9576px);">
-
-                        <div class="clock">
-                            <div class="horas" style="transform: rotate(441.454deg);"></div>
-                            <div class="minutos" style="transform: rotate(257.448deg);"></div>
-                            <div class="segundos" style="transform: rotate(326.88deg);"></div>
-                        </div>
-                    </div>
-                    <form class="formulario" method="post">
-
-                        <div class="field">
-                            <label for="nome">Nome*</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-
-                        <div class="field">
-                            <label for="telefone">Telefone*</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx ">
-                        </div>
-
-                        <div class="field">
-                            <label for="email">E-Mail*</label>
-                            <input type="email" id="email" name="email" placeholder="" required>
-                        </div>
-                        <!-- <div class="field radiobox">
-                <span>Deseja receber nossas novidades?</span>
-                <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
-                <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
-            </div> -->
-                        <div class="field">
-                            <label for="mensagem">Mensagem*</label>
-                            <textarea name="mensagem" id="mensagem" required></textarea>
-                        </div>
-
-                        <div class="container__button">
-                            <button type="submit" name="acao" value="Enviar">Enviar</button>
-                        </div>
-                    </form>
+                <div class="veja__mais">
+                    <a href="#">Veja  sobre Hans Donner<ion-icon class="icon__sobre"
+                            name="chevron-forward-outline"></ion-icon></a>
+                    <a href="#">Veja nossos produtos<ion-icon class="icon__sobre" name="chevron-forward-outline">
+                        </ion-icon></a>
                 </div>
             </div>
-
-        </div>
+        </section>
     </main>
+
 
 
 
@@ -89,7 +87,7 @@
                     <li><a href="#index.html">Inicio</a></li>
                     <li><a href="#download">Download</a></li>
                     <li><a href="#hans">Como Funciona</a></li>
-                    <li><a href="#sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
                     <li class="produtos__link"><a href="produtos.html">Produtos</a>
                         <div class="dropdown-content">
                             <a href="#produtos.html">Móveis</a>
@@ -229,7 +227,6 @@
 
     <script type="text/javascript" src="js/relogio-onne.js"></script>
     <script>
-        //  const timeline = new TimelineMax();
         const body = document.querySelector("body")
 
 
@@ -258,33 +255,39 @@
             }
         }
 
-        /*    // menu preenchido ========================
+        // menu preenchido ========================
 
-           function menuPreenchido() {
-               const menuFixo = document.querySelectorAll(".fixed-top");
-               menuFixo.forEach((i) => {
-                   if (window.pageYOffset >= 20) {
-                       body.classList.add("ativo__scrool");
+        //  function menuPreenchido() {
+        //     const menuFixo = document.querySelectorAll(".fixed-top");
+        //     menuFixo.forEach((i) => {
+        //         if (window.pageYOffset >= 20) {
+        //             body.classList.add("ativo__scrool");
 
-                   } else if (window.pageYOffset < 50) {
-                       body.classList.remove("ativo__scrool");
-                   }
-               });
-           }
-           menuPreenchido();
-           //menu__mobile */
-
+        //         } else if (window.pageYOffset < 50) {
+        //             body.classList.remove("ativo__scrool");
+        //         }
+        //     });
+        // }
+        // menuPreenchido();
 
 
 
 
 
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top;
+
+            $('html, body').animate({
+                scrollTop: targetOffset - 100
+            }, 700);
+        });
 
 
 
         menuItem.addEventListener("click", menuMobile); //click menu mobile
         itemMenu.forEach((i) => i.addEventListener("click", menuMobile)); //fecha on click
-        window.addEventListener("scroll", menuPreenchido);
     </script>
 </body>
 
