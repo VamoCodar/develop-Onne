@@ -1,16 +1,16 @@
-body#page__autor {
+&{
     font-family: 'Open Sans', sans-serif;
 
     color: white;
     overflow-x: hidden;
 }
 
-a[href="#autor"] {
-    color: $roxo "important;"
+a[href^="autor.html"] {
+    color: $roxo !important;
 }
 
 
-#page__autor {
+
     .sobre__wrapper {
         align-items: center;
     }
@@ -119,4 +119,3 @@ a[href="#autor"] {
             font-size: 14px;
         }
     }
-}

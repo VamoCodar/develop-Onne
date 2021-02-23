@@ -8,8 +8,8 @@
 
     @import "../style__produtos";
 
-    a[href="#produtos"] {
-        color: $roxo;
+    a[href="produtos.html"] {
+        color: $roxo !important;
     }
 
     #intro {
