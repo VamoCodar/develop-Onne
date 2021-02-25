@@ -1,34 +1,48 @@
-&{
+& {
     font-family: 'Open Sans', sans-serif;
-
     color: white;
     overflow-x: hidden;
 }
 
-a[href^="autor.html"] {
-    color: $roxo !important;
+
+
+
+
+.sobre__wrapper-2 {
+    align-items: center;
+    margin-top: 100px;
 }
 
+#sobre {
 
+    padding-top: 140px;
+    color: $preto-1;
+    padding-bottom: 80px;
 
-    .sobre__wrapper {
-        align-items: center;
-    }
-
-    #sobre {
-        padding-top: 140px;
-        color: $preto-1;
-        padding-bottom: 80px;
-
-
-
-    }
 
     .descricao {
         position: relative;
 
         @include d(m) {
             padding-bottom: 60px;
+        }
+
+        >span {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 10px 0;
+            display: inline-flex;
+            color: $preto-1;
+
+            @include d(s) {
+                margin: 0 auto;
+                margin-top: 20px !important;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+                color: $roxo;
+            }
         }
 
         h2 {
@@ -119,3 +133,4 @@ a[href^="autor.html"] {
             font-size: 14px;
         }
     }
+}

@@ -1,0 +1,67 @@
+#pagina__documentos {
+	padding: 5% 0;
+	padding-top: 0;
+}
+
+
+#wpadminbar {
+	display: none;
+
+}
+
+.intro__doc {
+	margin-top: 100px;
+	text-align: center;
+	margin-top: 50px;
+	text-align: center;
+	padding: 40px 0;
+	background-image: url(../img/background-white.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.intro__doc h1 {
+	font-weight: 700;
+}
+
+#pagina__documentos .first__wrapper {
+	justify-content: center;
+}
+
+.simulador__wrapper img {
+	border-bottom: none !important;
+}
+
+.cronograma__wrapper img {
+	border-bottom: none !important;
+
+}
+
+.caption__img img {
+	width: 100px;
+}
+
+#intro__info {
+	padding-top: 60px !important;
+}
+
+.language-menu {
+	z-index: 100;
+}
+
+.passo__wrapper img:after {
+    content: "";
+    display:block;
+	 width: 20px;
+    height: 20px;
+    background: blue;
+    font-size: 30px;
+    position: absolute;
+    bottom:-20px;
+}
+
+
+#pagina__portal #metricas .metricas__1 p:nth-child(3) {
+    top: 138px;
+}

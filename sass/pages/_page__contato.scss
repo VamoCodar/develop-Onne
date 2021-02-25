@@ -8,7 +8,6 @@
     @include menu-ativo;
 }
 
-
 a[href="contato.html"] {
     color: $roxo !important;
 }
@@ -19,6 +18,7 @@ a[href="contato.html"] {
     @include d(m) {
         @include bg-props-cover;
         background-image: url(../img/bg-degrade.jpg);
+        padding-bottom: 100px;
     }
 }
 
@@ -49,7 +49,7 @@ a[href="contato.html"] {
         padding: 10px 10px;
         border-radius: 8px;
         background: rgb(225, 225, 225);
-        width: 230px;
+        width: 300px;
         transition: 0.4s ease;
 
         &::placeholder {
@@ -71,13 +71,15 @@ a[href="contato.html"] {
         padding: 10px 10px;
         border-radius: 8px;
         background: rgb(225, 225, 225);
-        width: 230px;
+        width: 300px;
 
-        resize: vertical;
         padding: 7px 10px;
         border: none;
-        height: 60px;
+
+        height: 100px;
         max-height: 400px;
+        resize: vertical;
+
         outline: none !important;
         transition: border 0.4s ease;
 
@@ -100,15 +102,18 @@ a[href="contato.html"] {
         }
     }
 
-    >h1 {
+    h1 {
         font-size: 32px;
         text-align: center;
         color: $roxo;
         font-weight: 700;
         position: relative;
+        margin-bottom: 50px;
 
         @include d(m) {
             color: white;
+            margin-bottom: 0px;
+
         }
 
         &:after {
@@ -139,9 +144,10 @@ a[href="contato.html"] {
         }
 
         .container__button {
-            width: 250px;
+            width: 300px;
             display: inline-flex;
             justify-content: center;
+            margin-top: 10px;
 
             button {
                 background-color: $roxo;
@@ -161,7 +167,7 @@ a[href="contato.html"] {
 }
 
 .img__container {
-    height: 70vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -187,7 +193,7 @@ a[href="contato.html"] {
     transform: translateY(15.9576px);
     top: 0px;
     position: absolute;
-    margin-left: 220px;
+    margin-left: 420px;
 
     @include d(m) {
         zoom: .2;
@@ -200,7 +206,8 @@ a[href="contato.html"] {
 
 footer {
     margin-top: 60px;
-    @include d(m){
-        margin-top:0;
+
+    @include d(m) {
+        margin-top: 0;
     }
 }

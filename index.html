@@ -53,7 +53,7 @@
         </section>
         <section id="smart">
             <div class="smartphone">
-                <img src="img/smartphone-2.jpeg" alt="smartphone">
+                <img src="img/smartphone-3.jpg" alt="smartphone">
             </div>
             <div class="smart__cards">
                 <div class="container">
@@ -394,7 +394,7 @@
                             <a href="#produtos.html">Arquitetura</a>
                         </div>
                     </li>
-                    <li><a href="autor.html">Autor</a></li>
+                    <!-- <li><a href="autor.html">Autor</a></li> -->
                     <li><a href="contato.html">Contato</a></li>
 
                 </ul>
@@ -702,14 +702,16 @@
         // imageIntroMobile()
 
         // ancoras da home
-        let celularPosition = 190;
+        let celularPosition = 200;
 
         function ajustes() {
             if (window.innerWidth < 1281) {
-                celularPosition = 80
+                celularPosition = 60
             }
         }
         ajustes()
+
+
         $('a[href^="#smart"]').on('click', function (e) {
             e.preventDefault();
             var id = $(this).attr('href'),

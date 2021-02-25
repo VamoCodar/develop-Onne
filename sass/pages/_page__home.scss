@@ -1,12 +1,9 @@
-a[href="#inicio"] {
-    color: $roxo "important;"
-}
 
 
 
 #intro {
     height: 100vh;
-    min-height: 700px;
+    min-height: 730px;
     /*  background-image: url(../img/bg-intro.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,7 +42,7 @@ a[href="#inicio"] {
 
     .intro__text {
 
-        margin-top: 100px;
+        margin-top: 30px;
 
 
         @include d(s) {
@@ -86,12 +83,12 @@ a[href="#inicio"] {
             font-size: clamp(40px, 5vw, 80px);
             font-weight: bold;
 
-            strong {
+          /*   strong {
                 color: transparent !important;
                 text-transform: uppercase;
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: white;
-            }
+            } */
 
             @include d(m) {
                 text-align: center;
@@ -212,7 +209,7 @@ a[href="#inicio"] {
         //box-shadow: -1px 15px 18px -3px rgba(0,0,0,0.18);
         box-shadow: -6px 7px 18px 0px rgba(0, 0, 0, 0.18);
         max-width: 320px;
-        height: 300px;
+        min-height: 270px;
         max-height: 350px;
         background: white;
         transition: 0.4s ease;
@@ -226,6 +223,7 @@ a[href="#inicio"] {
             height: initial;
             padding: 20px 20px;
             margin: 0 auto;
+            min-height: 170px;
         }
 
         p {
@@ -234,7 +232,7 @@ a[href="#inicio"] {
         }
 
         h3 {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 20px;
             font-weight: bold;
             transition: .4s ease;
@@ -310,6 +308,8 @@ a[href="#inicio"] {
         @include d(m) {
             svg {
                 width: 40px;
+                margin-top: 10px;
+
             }
 
             li:first-child {
